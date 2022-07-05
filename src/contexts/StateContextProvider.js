@@ -1,22 +1,18 @@
 /* eslint-disable no-unused-vars */
 import React, { createContext, useContext, useState } from 'react';
+import { getDocs } from '../services/docs';
 
 const StateContext = createContext();
-const baseUrl = 'http://localhost:3000/docs';
 
 export const StateContextProvider = ({ children }) => {
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
 
-  const getResults = async (url) => {
+  const getResults = async (query) => {
     setLoading(true);
-
-    const res = await fetch(`${baseUrl}`, {
-      method: 'GET',
-    });
-
-    const data = await res.json();
+    const data = await getDocs(query);
+    console.log(data);
     setResults(data);
     setLoading(false);
   };

@@ -19,7 +19,7 @@ export const Results = () => {
   switch (location.pathname) {
     case '/docs':
       return (
-        <div className="flex items-center justify-center bg-gray-100">
+        <div className="flex items-center justify-center">
           <div className="grid grid-cols-12 max-w-5xl gap-4">
             {results?.map(({ title, content }, index) => (
               <div key={index} className="grid col-span-4 relative">
@@ -35,7 +35,7 @@ export const Results = () => {
       );
     case '/news':
       return (
-        <div className="flex items-center justify-center bg-gray-100">
+        <div className="flex items-center justify-center">
           <div className="grid grid-cols-12 max-w-5xl gap-4">
             {results?.map(({ title, content }, index) => (
               <div key={index} className="grid col-span-4 relative">
