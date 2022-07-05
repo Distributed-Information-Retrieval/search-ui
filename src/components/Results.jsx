@@ -17,7 +17,7 @@ export const Results = () => {
   if (loading) return <Loading />;
 
   switch (location.pathname) {
-    case '/search':
+    case '/docs':
       return (
         <div className="flex items-center justify-center bg-gray-100">
           <div className="grid grid-cols-12 max-w-5xl gap-4">

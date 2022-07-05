@@ -7,9 +7,9 @@ export const Routes = () => (
   <div className="p-4">
     <Switch>
       <Route exact path="/">
-        <Redirect to="/search" />
+        <Redirect to="/docs" />
       </Route>
-      <Route exact path="/search">
+      <Route exact path="/docs">
         <Results />
       </Route>
       <Route path="/news">
