@@ -12,7 +12,6 @@ export const StateContextProvider = ({ children }) => {
   const getResults = async (query) => {
     setLoading(true);
     const data = await getDocs(query);
-    console.log(data);
     setResults(data);
     setLoading(false);
   };

@@ -10,12 +10,12 @@ const get = async (url) => {
     return { error };
   }
 };
-console.log(API_HOST_1, API_HOST_2, API_HOST_3);
+
 const getRequest = async (endpoint) => {
   const results = await Promise.all([
     get(`${API_HOST_1}/${endpoint}`),
-    get(`${API_HOST_1}/${endpoint}`),
-    get(`${API_HOST_1}/${endpoint}`),
+    get(`${API_HOST_2}/${endpoint}`),
+    get(`${API_HOST_3}/${endpoint}`),
   ]);
 
   const response = results.find((result) => result.response);
